@@ -23,31 +23,31 @@ class SiteController extends Controller
             'birthday' => $bdayFormatted,
         ];
         //Exercicio 1(Componentes)
-        // $people = [
-        //     [
-        //         'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
-        //         'name' => 'John',
-        //         'birth' => '29/02/90',
-        //         'age' => 29
-        //     ],
-        //     [
-        //         'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
-        //         'name' => 'Anne',
-        //         'birth' => '29/02/90',
-        //         'age' => 29
-        //     ],
-        //     [
-        //         'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
-        //         'name' => 'Jane',
-        //         'birth' => '29/02/90',
-        //         'age' => 29
-        //     ]
-        // ];
-        // $d['people'] = $people;
+        $people = [
+            [
+                'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
+                'name' => 'John',
+                'birth' => '29/02/90',
+                'age' => 29
+            ],
+            [
+                'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
+                'name' => 'Anne',
+                'birth' => '29/02/90',
+                'age' => 29
+            ],
+            [
+                'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
+                'name' => 'Jane',
+                'birth' => '29/02/90',
+                'age' => 29
+            ]
+        ];
+        $d['people'] = $people;
         //Exercicio 2(Loops)
-        $number = 0;
-        $url = 'https://i.pravatar.cc/150?img='.$number;
-        $d ['url'] = $url;
+        // $number = 0;
+        // $url = 'https://i.pravatar.cc/150?img='.$number;
+        // $d ['url'] = $url;
         return view('welcome', $d);
     }
     public function exit()
@@ -61,4 +61,10 @@ class SiteController extends Controller
         ];
         return view('users', $data);
     }
+    public function index2()
+    {
+
+        return view('include');
+    }
+
 }

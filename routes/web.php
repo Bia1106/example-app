@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return 'continuo no router! =D';
 //     return view('welcome');
 // });
-
+Route::get('/include', [SiteController::class, 'index2']);
 Route::get('/', [SiteController::class, 'index']);
 Route::get('/exit', [SiteController::class, 'exit']);
 Route::get('/users/{qnt}', [SiteController::class, 'users']);

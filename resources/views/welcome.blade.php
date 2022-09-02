@@ -55,6 +55,10 @@
                       {{$number}}
                 @endcomponent
             @endfor --}}
+
+            @foreach ($people as $p)
+                @include('components.cards', $p)
+            @endforeach
         </div>
     </div>
 
