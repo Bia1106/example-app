@@ -22,3 +22,5 @@ Route::get('/include', [SiteController::class, 'index2']);
 Route::get('/', [SiteController::class, 'index']);
 Route::get('/exit', [SiteController::class, 'exit']);
 Route::get('/users/{qnt}', [SiteController::class, 'users']);
+Route::get('/layout', [SiteController::class, 'layout']);
+Route::get('/layout2', [SiteController::class, 'layout2']);

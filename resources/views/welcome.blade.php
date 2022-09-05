@@ -15,24 +15,25 @@
     {{-- Para exibir um html interpretado: {!! $variavel !!} --}}
     <div class="container">
         <div class="row">
+            @component('components.botao')
+                @slot('cor')
+                    green
+                @endslot
+                Refresh
+            @endcomponent
+        </div>
+        <div class="col">
+            @component('components.botao')
+                @slot('cor')
+                    blue
+                @endslot
+                Atualizar
+            @endcomponent
+        </div>
+        <div class="row">
             <div class="col">
-                @component('components.botao')
-                    @slot('cor')
-                        green
-                    @endslot
-                    Refresh
-                @endcomponent
-            </div>
-            <div class="col">
-                @component('components.botao')
-                    @slot('cor')
-                        blue
-                    @endslot
-                    Atualizar
-                @endcomponent
-            </div>
-            {{-- Exercicio 1(Componentes) --}}
-            {{-- @foreach ($people as $p)
+                {{-- Exercicio 1(Componentes) --}}
+                {{-- @foreach ($people as $p)
                 <div class="col">
                     @component('components.cards')
                         @slot('path')
@@ -46,8 +47,8 @@
                     @endcomponent
                 </div>
             @endforeach --}}
-            {{-- Exercicio 2(Loops) --}}
-            {{-- @for ($number = 0; $number < 50; $number++)
+                {{-- Exercicio 2(Loops) --}}
+                {{-- @for ($number = 0; $number < 50; $number++)
                 @component('components.cards')
                     @slot('path')
                       {{$url.$number}}
@@ -56,13 +57,16 @@
                 @endcomponent
             @endfor --}}
 
-            @foreach ($people as $p)
-                @include('components.cards', $p)
-            @endforeach
+                @foreach ($people as $p)
+                    @include('components.cards', $p)
+                @endforeach
+            </div>
         </div>
-    </div>
-
-
+        <div class="row">
+            <x-teste>
+                <p>testando adição de componentes igual ao do React</p>
+            </x-teste>
+        </div>
 
 </body>
 
